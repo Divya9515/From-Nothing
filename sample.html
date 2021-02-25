@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetsExample</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+<body class="pt-2 ">
+    <form action="#" method="POST" id="myform">
+         <label>Username:</label><input type="text" id="uname">
+         <input type="button" value="Submit" onclick="checkname()"><br/>
+         <label id="message"></label>
+    </form>
+    <script type="text/javascript">
+        
+      let set = new Set();
+         set.add("divya");
+         set.add('nandy');
+         set.add('sindhu');
+        function checkname()
+        {
+         
+         let uname =document.getElementById("uname").value;
+         if(set.has(uname))
+         {
+             document.getElementById('message').innerHTML="Username already used";
+         }
+         else
+         {
+             set.add(uname);
+             alert("You have been successfully registered");
+             console.log(set);
+         }
+        }
+     </script>
+</body>
+</html>
